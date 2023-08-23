@@ -48,6 +48,7 @@ namespace StarterAssets
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
+			print(newMoveDirection);
 			move = newMoveDirection;
 		} 
 
