@@ -12,11 +12,7 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] private Text player3Text;
     [SerializeField] private Text player4Text;
     [SerializeField] private Text player5Text;
-    [SerializeField] private Text player6Text;
-    [SerializeField] private Text player7Text;
-    [SerializeField] private Text player8Text;
-    [SerializeField] private Text player9Text;
-    [SerializeField] private Text player10Text;
+
 
     public class PlayerScore
     {
@@ -30,7 +26,7 @@ public class LeaderboardManager : MonoBehaviour
     public void AddPlayerScore()
     {
         string playerName = "";
-        int score = 0;
+        int score = GameManager.instance.score;
 
         PlayerScore newScore = new PlayerScore
         {

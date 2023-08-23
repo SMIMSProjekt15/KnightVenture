@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 6332692866028076754}
   - component: {fileID: 8711139859804849113}
   - component: {fileID: 3323459327146251041}
+  - component: {fileID: -7373439442441820393}
   m_Layer: 0
   m_Name: aaaa
   m_TagString: Player
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 20
   jumpVelocity: 10
+  gravityMultiplier: 2
 --- !u!114 &3323459327146251041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +256,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca516c9d5639dfa4e970596c4947954c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7373439442441820393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767027955255482561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e05797cfec8e934d91bc9fae2e7e2c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8022482287407946208, guid: a15bc99e94b65a740af671de52c1d713, type: 3}
