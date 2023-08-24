@@ -27,7 +27,7 @@ public class HealthManager : MonoBehaviour
         }
 
 
-        healthText.text = "Health " + health;
+        healthText.text = "Health: " + health;
 
 
     }
