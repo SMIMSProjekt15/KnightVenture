@@ -11,21 +11,19 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public int score = 0;
-    public string playerName;
+    public string playerName = null;
 
     public int highScore = 0;
     public int maxLifes = 3;
     private int lifes;
 
-    private bool gameStarted = false;
+    private bool gameStarted = true;
 
     void Start()
     {
         if (gameStarted == false)
         {
             gameStarted = true;
-            score = 0;
-            lifes = maxLifes;
             Debug.Log("Spiel wurde gestartet!");
             SceneManager.LoadScene(0);
 
@@ -45,6 +43,26 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void startGame()
+    {
+        score = 0;
+        playerName = "Lara";
+        //NamenSpeichern.instance.myInputField.text
+        lifes = maxLifes;
+        SceneManager.LoadScene(1);
+
+    }
+
+    public void neustart()
+    {
+        lifes = maxLifes;
+        SceneManager.LoadScene(0);
+    }
+
+    public void scoreboard()
+    {
+        SceneManager.LoadScene(4);
+    }
     public void DecreaseHealth()
     {
         --lifes;
@@ -68,7 +86,7 @@ public class GameManager : MonoBehaviour
 
     public class PlayerScore
     {
-        public string playerName;
+        public string playerName1;
         public int playerScore;
     }
 
@@ -77,12 +95,12 @@ public class GameManager : MonoBehaviour
 
     public void AddPlayerScore()
     {
-        string playerName = "__";
+        string playerName1 = playerName;
         int score1 = score;
 
         PlayerScore newScore = new PlayerScore
         {
-            playerName = playerName,
+            playerName1 = playerName,
             playerScore = score1
         };
 
@@ -96,7 +114,7 @@ public class GameManager : MonoBehaviour
         {
             if (i < playerScores.Count)
             {
-                playerTexts[i].text = $"{playerScores[i].playerName}: {playerScores[i].playerScore}";
+                playerTexts[i].text = $"{playerScores[i].playerName1}: {playerScores[i].playerScore}";
             }
             else
             {
